@@ -1,0 +1,56 @@
+h3{
+    margin-top: 100px;
+    color:deepskyblue;
+    margin-left:60px;
+}
+.hr1{
+    border: 2px solid pink;
+    margin-left:60px;
+    width:60%;
+}
+.myschleft{
+    float:left;
+    width:70%;
+}
+.myschright{
+    float:right;
+    width:30%;
+   /* margin-left:100px;*/
+}
+
+.advtit{
+    background: deepskyblue;
+    font-size: large;
+    font-weight:bold;
+    width:250px;
+    height:60px;
+    text-align: center;
+    line-height: 60px;
+    margin-top:20px;
+}
+.adver{
+    background-image: url("../images/00.jpg");
+    width:250px;
+    height:180px;
+    color:white;
+}
+.destxt{
+    background: #CCCCCC;
+    width:250px;
+    height:60px;
+    text-align:center;
+    line-height:60px;
+}
+.pho{
+    margin-top:20px;
+}
+.adver1{
+    background-image: url("../images/101.jpg");
+    width:250px;
+    height:180px;
+    color:white;
+}
+.pho1{
+    margin-top:20px;
+    margin-right:-200px;
+}

@@ -1,0 +1,103 @@
+.title{
+    width:100%
+    height:50px;
+    border-bottom: 2px solid orange;
+}
+.person{
+    width:60px;
+    height:40px;
+   /* border:1px solid yellow;*/
+    text-align: center;
+    line-height: 40px;
+    float:left;
+}
+.company{
+    width:60px;
+    height:40px;
+  /*  border:1px solid red;*/
+    text-align: center;
+    line-height: 40px;
+    float:left;
+}
+.clear{
+    clear:both;
+}
+
+.contleft{
+    float:left;
+}
+.imge{
+    background: lightpink;
+    width:300px;
+    height:180px;
+ /*   position: relative;
+    top:2px;
+    left:0;*/
+}
+.imgt{
+    background:cornflowerblue;
+    width:300px;
+    height:180px;
+    text-align:center;
+    line-height:180px;
+    /*padding-top:130px;*/
+   /* position:relative;
+    top:20px;*/
+}
+/*#demo{
+    width:330px;
+    height:320px;
+    border:1px solid mediumpurple;
+    float:left;
+    position:relative;
+    top:20px;
+    left:20px;
+}*/
+/*
+.cus{
+    width:320px;
+    height:300px;
+    position:relative;
+    left:-70px;
+    top:-18px;
+}*/
+
+
+.contleft{
+    margin-left:100px;
+}
+.inp{
+    text-align:right;
+    width:200px;
+}
+textarea{
+    text-align: right;
+    width:200px;
+}
+
+.cont{
+    margin-top:10px;
+}
+.dec{
+    text-align: right;
+    float:left;
+}
+.decs{
+    padding-left:8px;
+}
+.ps{
+    font-size: small;
+    text-align:right;
+}
+.btn{
+    width:66px;
+    height:30px;
+    border-radius:15px;
+    margin-left:960px;
+    left:20px;
+    position: relative;
+    top:-50px;
+ /*   margin-top:-200px;*/
+    padding:6px;
+    background:deepskyblue;
+}

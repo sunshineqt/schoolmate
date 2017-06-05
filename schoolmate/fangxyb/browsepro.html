@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/browsepro.css" rel="stylesheet" />
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/vue.js"></script>
+<body>
+<!--导航-->
+<div class="nav">
+    <div class="navlist">
+        <div><img src="images/logo.png"></div>
+        <ul class="ulist">
+            <li class="llist" id="llist1">
+                <a href="index.html">首页</a>
+            </li>
+            <li class="llist" id="llist2">
+                <a href="initpro.html">发起项目</a>
+            </li>
+            <li class="llist" id="llist3">
+                <a href="browsepro.html">浏览项目</a>
+            </li>
+            <li class="llist" id="llist4">
+                <a href="myschool.html">我的母校</a>
+            </li>
+            <li class="llist" id="llist5">
+                <a href="monthact.html">月度活动</a>
+            </li>
+        </ul>
+    </div>
+    <div class="navsearch">
+        <input type="text" placeholder="勇敢一点" />
+        <button>搜索</button>
+    </div>
+    <div class="navclick">
+        <button class="btn1">注册<a href="#"></a></button>
+        <button class="btn2">登录<a href="#"></a></button>
+    </div>
+</div>
+<!--<div style="margin-top: 100px;">浏览项目</div>-->
+<div class="bronav">
+    <div class="bronav1">
+         <span class="typ">类型：</span>
+         <span class="sp" id="s11">全部</span>
+         <span class="sp" id="s12">学术</span>
+         <span class="sp" id="s13">社团</span>
+         <span class="sp" id="s14">休闲</span>
+         <span class="sp" id="s15">其他</span>
+    </div>
+    <div class="bronav2">
+        <span class="typ">状态：</span>
+         <span class="sp" id="s21">全部</span>
+         <span class="sp" id="s22">众筹中</span>
+         <span class="sp1"id="s23">执行中</span>
+         <span class="sp2" id="s24">已结束</span>
+    </div>
+    <div class="clear"></div>
+    <div class="bt">
+        <button class="bt1">按热度排序</button>
+        <button class="bt2">按时间排序</button>
+    </div>
+</div>
+<div class="clear"></div>
+<hr />
+<div id="demo">
+    <custom1 title="免费午餐小善大爱多一份爱心多一份和平与安详"
+             number="900"
+             school="宁波大学"
+             time="2016-8-16"
+             money="900"
+             per="20"
+             num="1600"
+            >
+        <div slot="imgtit">
+            <a href="#">
+                <div id="rest">
+                    剩余18天
+                </div>
+                <img src="./images/1.jpg" />
+            </a>
+        </div>
+        <div slot="img"><img src="./images/probar1.png" style="width:300px;height:16px;" /></div>
+    </custom1>
+    <custom1 title="大城小爱"
+             number="900"
+             school="浙江理工大学"
+             time="2016-12-16"
+             money="1500"
+             per="30"
+             des="播种一份希望，给别人也是给自己"
+            >
+        <div slot="imgtit">
+            <a href="#">
+                <div id="running">
+                    执行中
+                </div>
+
+                <img src="./images/3.jpg" />
+                <!--<img src="./images/1.png" style="width:80px;height:36px;" />-->
+            </a>
+
+        </div>
+        <div slot="img"><img src="./images/probar2.png" style="width:300px;height:16px;" /></div>
+    </custom1>
+    <custom1 title="免费午餐小善大爱"
+             number="1000"
+             school="浙江大学"
+             time="2016-9-16"
+             money="1900"
+             per="35"
+             num="600"
+             des="临渊羡鱼不如退而结网"
+            >
+        <div slot="imgtit">
+            <a href="#">
+                <div id="over">
+                    已结束
+                </div>
+                <img src="./images/0.jpg" />
+            </a>
+        </div>
+        <div slot="img"><img src="./images/probar3.png" style="width:300px;height:16px;" /></div>
+    </custom1>
+    <custom1 title="相信时间相信自己"
+             number="1200"
+             school="南京大学"
+             time="2016-2-16"
+             money="1900"
+             per="20"
+             num="1500"
+            >
+        <div slot="imgtit">
+            <a href="#">
+                <div id="rest">
+                    剩余20天
+                </div>
+                <img src="./images/timg.jpg" />
+            </a>
+        </div>
+        <div slot="img"><img src="./images/probar1.png" style="width:300px;height:16px;" /></div>
+    </custom1>
+    <custom1 title="生活很美好，学会欣赏生活"
+             number="1200"
+             school="杭州师范大学"
+             time="2016-7-16"
+             money="2500"
+             per="20"
+             des="播种一份希望，给别人也是给自己"
+            >
+        <div slot="imgtit">
+            <a href="#">
+                <div id="running">
+                    执行中
+                </div>
+
+                <img src="./images/11.jpg" />
+                <!--<img src="./images/1.png" style="width:80px;height:36px;" />-->
+            </a>
+
+        </div>
+        <div slot="img"><img src="./images/probar2.png" style="width:300px;height:16px;" /></div>
+    </custom1>
+    <custom1 title="越努力越幸运"
+             number="1200"
+             school="浙江大学"
+             time="2016-8-18"
+             money="1600"
+             per="31"
+             num="900"
+             des="临渊羡鱼不如退而结网"
+            >
+        <div slot="imgtit">
+            <a href="#">
+                <div id="over">
+                    已结束
+                </div>
+                <img src="./images/22.jpg" />
+            </a>
+        </div>
+        <div slot="img"><img src="./images/probar3.png" style="width:300px;height:16px;" /></div>
+    </custom1>
+    <div class="clear"></div>
+</div>
+
+<div class="cite">
+    <span>首页</span>
+    <span>上一页</span>
+    <span>1 / 20</span>
+    <span>下一页</span>
+    <span>尾页</span>
+</div>
+<!-- 底栏-->
+<div class="copyright" style=" ">
+    <div class="copy-txt" style=" ">
+        © 中国·宁波大学sxt 版权所有 浙ICP备666666号
+        <br>技术支持:宁波大学sxt
+    </div>
+</div>
+<script src="js/index1.js"></script>
+<script src="js/browsepro.js"></script>
+</body>
+</html>

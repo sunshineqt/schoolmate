@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/index.css" rel="stylesheet" />
+    <script charset="utf-8"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/vue.js"></script>
+<body>
+   <!--导航-->
+   <div class="nav">
+       <div class="navlist">
+         <div><img src="images/logo.png"></div>
+         <ul class="ulist">
+           <li class="llist" id="llist1">
+               <a href="index.html" id="a1">首页</a>
+           </li>
+           <li class="llist" id="llist2">
+               <a href="initpro.html">发起项目</a>
+           </li>
+           <li class="llist" id="llist3">
+               <a href="browsepro.html">浏览项目</a>
+           </li>
+           <li class="llist" id="llist4">
+               <a href="myschool.html">我的母校</a>
+           </li>
+           <li class="llist" id="llist5">
+               <a href="monthact.html">月度活动</a>
+           </li>
+         </ul>
+      </div>
+     <div class="navsearch">
+          <input type="text" placeholder="勇敢一点" />
+          <button>搜索</button>
+     </div>
+     <div class="navclick">
+       <button class="btn1">注册<a href="#"></a></button>
+       <button class="btn2">登录<a href="#"></a></button>
+     </div>
+   </div>
+   <div class="clear"></div>
+   <!--轮播图-->
+   <div id="luanpo">
+       <ul id="imgs">
+           <li><img src="images/66.jpg" width="1600" height="300"/></li>
+           <li><img src="./images/11.jpg" width="1600" height="300"/></li>
+           <li><img src="./images/22.jpg" width="1600" height="300"/></li>
+           <li><img src="./images/00.jpg" width="1600" height="300"/></li>
+       </ul>
+       <ul id="num">
+           <li class="a">1</li>
+           <li class="b">2</li>
+           <li class="b">3</li>
+           <li class="b">4</li>
+       </ul>
+
+   </div>
+   <script type="text/javascript">
+       var imgs=document.getElementById('imgs').getElementsByTagName('li');
+       var nums=document.getElementById("num").getElementsByTagName("li");
+       var luanpo=document.getElementById("luanpo");
+       var oimg=document.getElementById('imgs');
+       var iNow=0;
+       var dt=null;
+       oimg.style.width=imgs.length*imgs[0].offsetWidth+"px";
+
+       function tab(){
+           for(var i=0;i<nums.length;i++){
+               nums[i].index=i;
+               nums[i].onclick=function(){
+                   clearInterval(dt);
+                   iNow=this.index;
+                   for(var i=0;i<nums.length;i++){
+                       nums[i].className="b";
+                   }
+                   this.className="a";
+                   oimg.style.left=-(imgs[0].offsetWidth*iNow)+"px";    //这边可以加上我前面所写的那个缓动框架
+               }
+               nums[i].onmouseout=function(){
+                   start();
+               }
+           }
+       }
+
+       function start(){
+           clearInterval(dt);
+           dt=setInterval(function(){
+               if(iNow>nums.length-2){
+                   iNow=0;
+               }else{
+                   iNow++;
+               }
+               for(var k=0;k<nums.length;k++){
+                   if(iNow==nums[k].index){nums[k].className='a';}else{nums[k].className='b';}
+               }
+               oimg.style.left=-(imgs[0].offsetWidth*iNow)+"px";    //这边可以加上我前面所写的那个缓动框架
+           },1000);
+           tab();
+       }
+       start();
+   </script>
+       <!--轮播图结束-->
+   <!--main部分-->
+<!--热门活动部分-->
+<div class="main">
+    <div class="mainimg">
+        <div class="hottit">
+            <h3>热门活动</h3>
+            <a href="#" style="color: darkorchid">浏览更多</a>
+        </div>
+        <div class="hot">
+            <div class="hotleft">
+                <div class="info1">
+                    <!-- <img src="images/2.jpg" />-->
+                    <div class="des">
+                        <span>宁波大学</span>
+                        <span>2017-2-16</span>
+                    </div>
+                </div>
+                <div class="info2">
+                    <!--  <img src="images/33.png" />-->
+                    <div class="des">
+                        <span>杭电</span>
+                        <span>2017-1-16</span>
+                    </div>
+                </div>
+                <div class="info3">
+                    <!--   <img src="images/22.jpg" />-->
+                    <div class="des">
+                        <span>浙大</span>
+                        <span>2016-12-16</span>
+                    </div>
+                </div>
+                <div class="info4">
+                    <!--   <img src="images/6.jpg" />-->
+                    <div class="des">
+                        <span>浙工大</span>
+                        <span>2017-3-16</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hotright">
+                <ul>
+                    <li class="ll" id="ll1"><a href="#">时间等等我</a></li>
+                    <li class="ll" id="ll2"><a href="#">为青春喝彩</a></li>
+                    <li class="ll" id="ll3"><a href="#">周末一起玩</a></li>
+                    <li class="ll" id="ll4"><a href="#">更上一层楼</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+    <div class="clear"></div>
+    <div class="latestline">
+        <div class="line">
+            <h3>最新上线</h3>
+            <a href="#" style="color: darkorchid">浏览更多</a>
+        </div>
+        <div class="clear"></div>
+        <div id="demo" class="demom">
+            <!--   <custom1 :list="list[1]"></custom1>
+               <custom1 :list="list[2]"></custom1>
+               <custom1 :list="list[3]"></custom1>-->
+            <custom1 title="相信时间相信自己"
+                     number="1200"
+                     school="上海大学"
+                     time="2017-3-16"
+                     money="900"
+                     per="28"
+                     num="1200"
+                    >
+                   <a href="#">
+                        <div slot="imgtit">
+                        <div id="rest">
+                                剩余16天
+                            </div>
+                        <img src="./images/66.jpg" />
+                    </a>
+                </div>
+                <div slot="img"><img src="./images/probar1.png" style="width:300px;height:16px;" /></div>
+            </custom1>
+            <custom1 title="我们都是好孩子"
+                     number="1900"
+                     school="安徽大学"
+                     time="2016-11-16"
+                     money="1100"
+                     per="26"
+                     des="播种一份希望，给别人也是给自己"
+                    >
+                <div slot="imgtit">
+                    <a href="#">
+                        <div id="running">
+                         执行中
+                        </div>
+
+                        <img src="./images/33.png" />
+                        <!--<img src="./images/1.png" style="width:80px;height:36px;" />-->
+                    </a>
+
+                </div>
+                <div slot="img"><img src="./images/probar2.png" style="width:300px;height:16px;" /></div>
+            </custom1>
+            <custom1 title="生活处处充满爱和希望"
+                     number="1800"
+                     school="北京大学"
+                     time="2016-6-16"
+                     money="2000"
+                     per="40"
+                     num="660"
+                     des="临渊羡鱼不如退而结网"
+                    >
+                <div slot="imgtit">
+                    <a href="#">
+                        <div id="over">
+                            已结束
+                        </div>
+                        <img src="./images/00.jpg" />
+                    </a>
+                </div>
+                <div slot="img"><img src="./images/probar3.png" style="width:300px;height:16px;" /></div>
+            </custom1>
+        </div>
+    <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <div class="cite">
+        <span>首页</span>
+        <span>上一页</span>
+        <span>1 / 20</span>
+        <span>下一页</span>
+        <span>尾页</span>
+    </div>
+</div>
+
+<!-- 底栏-->
+   <div class="copyright">
+       <div class="copy-txt">
+           © 中国·宁波大学sxt 版权所有 浙ICP备666666号
+           <br>技术支持:宁波大学sxt
+       </div>
+   </div>
+<script src="js/index1.js"></script>
+</body>
+</html>

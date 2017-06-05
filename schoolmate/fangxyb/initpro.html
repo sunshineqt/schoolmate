@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/initpro.css" rel="stylesheet" />
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/vue.js"></script>
+<body>
+<!--导航-->
+<div class="nav">
+    <div class="navlist">
+        <div><img src="images/logo.png"></div>
+        <ul class="ulist">
+            <li class="llist" id="llist1">
+                <a href="index.html">首页</a>
+            </li>
+            <li class="llist" id="llist2">
+                <a href="initpro.html">发起项目</a>
+            </li>
+            <li class="llist" id="llist3">
+                <a href="browsepro.html">浏览项目</a>
+            </li>
+            <li class="llist" id="llist4">
+                <a href="myschool.html">我的母校</a>
+            </li>
+            <li class="llist" id="llist5">
+                <a href="monthact.html">月度活动</a>
+            </li>
+        </ul>
+    </div>
+    <div class="navsearch">
+        <input type="text" placeholder="勇敢一点" />
+        <button>搜索</button>
+    </div>
+    <div class="navclick">
+        <button class="btn1">注册<a href="#"></a></button>
+        <button class="btn2">登录<a href="#"></a></button>
+    </div>
+</div>
+<!--<div style="margin-top: 100px;">发起项目</div>-->
+<div class="content" style="margin-top: 100px;">
+  <div class="title">
+        <h2>发起项目</h2>
+        <div class="person">个人</div>
+        <div class="company">公司</div>
+        <div class="clear"></div>
+    </div>
+   <div class="contleft">
+    <div class="cont">
+        <div class="dec">
+            <span style="color:red;">*</span>项目名称：
+        </div>
+
+        <input class="inp" type="text"/>
+    </div>
+    <div class="cont">
+        <div class="dec">
+            <span style="color:red;">*</span>项目封面：
+        </div>
+
+        <input class="inp" type="file"/>
+    </div>
+    <div class="cont">
+        <div class="dec">
+            <span style="color:red;">*</span>项目类型：
+        </div>
+
+        <input class="inp" type="checkbox" style="width: auto" />公益
+        <input class="inp" type="checkbox" style="width: auto" />学术
+        <input class="inp" type="checkbox" style="width: auto" />社团
+        <input class="inp" type="checkbox" style="width: auto" />休闲
+        <input class="inp" type="checkbox" style="width: auto" />其他
+    </div>
+   <div class="cont">
+       <span class="dec decs">项目简介：</span>
+      <textarea class="inp"></textarea>
+       <span class="ps">填写你的项目简介，60字以内</span>
+   </div>
+   <div class="cont">
+       <span class="dec decs">宣传视频：</span>
+       <input class="inp" type="file" />
+       <span class="ps">只能上传一个视频，10M以内。</span>
+   </div>
+    <div class="cont">
+        <span class="dec decs">项目详情：</span>
+        <textarea class="inp"></textarea>
+    </div>
+    <div class="cont">
+        <div class="dec">
+            <span style="color: red;">*</span>目标金额：
+        </div>
+
+        <input class="inp" type="text" />
+        <span class="ps">填写项目计划筹备金额</span>
+    </div>
+    <div class="cont">
+        <div class="dec">
+            <span style="color:red;">*</span>截止时间：
+        </div>
+
+        <input class="inp" type="date" />
+        <span class="ps">请选择项目截止的时间</span>
+    </div>
+    <div class="cont">
+        <div class="dec">
+            <span style="color:red;">*</span>项目地点：
+        </div>
+
+        <select class="inp" style="width: 98px;">
+            <option>请选择省份</option>
+            <option>浙江</option>
+            <option>上海</option>
+            <option>安徽</option>
+        </select>
+        <select class="inp" style="width: 98px;">
+            <option>请选择城市</option>
+            <option>杭州</option>
+            <option>上海</option>
+            <option>合肥</option>
+        </select>
+    </div>
+   </div>
+    <div id="demo">
+        <custom1 class="cus"
+                 title="项目名称"
+                 number="0"
+                 school="学校名称"
+                 time="项目时间"
+                 money="0"
+                 per="0"
+                 num="0"
+                 des="项目简介"
+                >
+            <div slot="imgtit" class="imge">
+                <a href="#">
+                    <div id="rest">
+                        剩余0天
+                    </div>
+                    <div class="imgt">项目封面</div>
+                </a>
+            </div>
+            <div slot="img"><img src="./images/probar1.png" style="width:300px;height:16px;" /></div>
+        </custom1>
+    </div>
+</div>
+<div class="clear"></div>
+<button class="btn">提交申请</button>
+<!-- 底栏-->
+<div class="copyright"style=" width: 100%;
+    background: green;
+    height:56px;
+    padding-top: 20px;
+    margin-top:10px;">
+    <div class="copy-txt">
+        © 中国·宁波大学sxt 版权所有 浙ICP备666666号
+        <br>技术支持:宁波大学sxt
+    </div>
+</div>
+<script src="js/initpro.js"></script>
+<script src="js/index1.js"></script>
+</body>
+</html>
